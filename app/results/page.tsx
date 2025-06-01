@@ -1,11 +1,10 @@
 "use client";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { useState } from "react";
 import { FaSearch, FaDownload } from "react-icons/fa";
 
 export default function Results() {
-  const [expanded, setExpanded] = useState(false);
+
 
   return (
     <>
