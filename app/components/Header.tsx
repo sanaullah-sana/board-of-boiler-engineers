@@ -23,10 +23,7 @@ export default function Header() {
       </div>
 
       {/* Main header section with background image */}
-      <header
-        style={{ backgroundImage: "url('/banner-1.png')" }}
-        className="bg-cover bg-center min-h-[60vh] md:min-h-screen w-full"
-      >
+      <header>
         {/* Inner header image section */}
         <div
           className="w-full bg-cover bg-center bg-no-repeat lg:min-h-[15vh]"
@@ -87,7 +84,7 @@ export default function Header() {
         </div>
 
         {/* Navigation bar */}
-        <nav className="bg-black/40 lg:bg-black relative z-50">
+        <nav className="bg-black lg:bg-black relative z-50">
           <div className="max-w-[1280px] mx-auto px-4 flex items-center justify-between h-[60px]">
 
             {/* Desktop navigation menu (hidden on mobile) */}
@@ -117,7 +114,7 @@ export default function Header() {
               </li>
               <li className="h-full flex items-center">
                 <Link
-                  href="/member-of-board"
+                  href="/members-of-board"
                   className={`text-white h-full flex items-center px-6 font-medium font-open-sans transition ${
                     pathname === "/member-of-board" ? "bg-[#004432]" : "hover:bg-[#004432]"
                   }`}
@@ -231,7 +228,7 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/member-of-board"
+                  href="/members-of-board"
                   onClick={() => setOffcanvasOpen(false)}
                   className={`block text-white px-4 py-2 rounded-md font-medium font-open-sans transition ${
                     pathname === "/member-of-board" ? "bg-[#004432]" : "hover:bg-[#004432]"

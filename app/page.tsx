@@ -47,8 +47,15 @@ export default function Home() {
 
   return (
     <>
+    {/* Header Section */}
       <Header />
-
+        {/* Intro Banner Section */}
+      <section
+        style={{ backgroundImage: "url('/banner-1.png')" }}
+        className="bg-cover bg-center min-h-80 w-full"
+      >
+      </section>
+      {/* Intro Banner Section */}
       {/* About Section */}
       <section className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

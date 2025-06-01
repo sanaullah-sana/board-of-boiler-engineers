@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaTwitter, FaGlobe } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter, FaGlobe, FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 function LanguageSelector() {
   return (
@@ -27,40 +27,84 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-[#004432] text-white py-10">
-        <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1 */}
-          <div>
-            <h2 className="md:text-xl text-base font-semibold mb-4 font-open-sans">
-              Contact Information
-            </h2>
-            <div>
-              <a
-                href="tel:(042)99211535"
-                className="md:text-base text-sm font-semibold block"
-              >
-                (042)99211535
-              </a>
-              <a
-                href="mailto:info@boilerengineering.com"
-                className="md:text-base text-sm font-semibold block"
-              >
-                info@boilerengineering.com
-              </a>
-              <address className="text-sm not-italic pt-2">
-                <a
-                  href="https://maps.app.goo.gl/9UYRG2kE2hXAJSEU7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  Board of Examination (For Boiler Engineer) Near Chauburji
-                  Orange Line Station, 38-Poonch House, Multan Road, Lahore.
-                </a>
-              </address>
-            </div>
-          </div>
+<div>
+  <h2 className="md:text-xl text-base font-semibold mb-4 font-open-sans">
+    Contact Information
+  </h2>
+  <div className="space-y-2">
+    <a
+      href="tel:(042)99211535"
+      className="md:text-base text-sm font-semibold flex items-center space-x-2"
+    >
+      <FaPhone className="text-white" />
+      <span>(042)99211535</span>
+    </a>
+    <a
+      href="mailto:info@boilerengineering.com"
+      className="md:text-base text-sm font-semibold flex items-center space-x-2"
+    >
+      <FaEnvelope className="text-white" />
+      <span>info@boilerengineering.com</span>
+    </a>
+    <address className="text-sm not-italic pt-2">
+      <a
+        href="https://maps.app.goo.gl/9UYRG2kE2hXAJSEU7"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:underline flex items-center space-x-2"
+      >
+        <FaMapMarkerAlt className="text-white" />
+        <span>
+          Board of Examination (For Boiler Engineer) Near Chauburji Orange Line Station, 38-Poonch House, Multan Road, Lahore.
+        </span>
+      </a>
+    </address>
+  </div>
+</div>
 
-          {/* Column 2 */}
+          {/* Column 2: Contact Form */}
+<div>
+  <h2 className="lg:text-xl text-base font-semibold mb-4 font-open-sans">
+    Get in touch
+  </h2>
+  <form className="space-y-3">
+    {/* Name and Email Row */}
+    <div className="flex flex-col lg:flex-row lg:space-x-2 space-y-2 lg:space-y-0">
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        className="w-full lg:w-1/2 px-3 py-2 rounded-md text-black bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        className="w-full lg:w-1/2 px-3 py-2 rounded-md text-black bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600"
+      />
+    </div>
+    {/* Message */}
+    <textarea
+      name="message"
+      rows={3}
+      placeholder="Message"
+      className="w-full px-3 py-2 rounded-md text-black bg-white border border-gray-300 resize-none focus:outline-none focus:ring-2 focus:ring-green-600"
+    ></textarea>
+    {/* Send Button */}
+    <button
+      type="submit"
+      className="bg-black cursor-pointer text-white font-semibold px-4 py-2 rounded-md transition duration-300"
+    >
+      Send Message
+    </button>
+  </form>
+</div>
+
+
+
+          {/* Column 3 */}
           <div>
             <h2 className="md:text-xl text-base font-semibold mb-4 font-open-sans">
               Quick Links
@@ -114,7 +158,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3 */}
+          {/* Column 4 */}
           <div>
             <h2 className="md:text-xl text-base font-semibold mb-4 font-open-sans">
               Follow Us
