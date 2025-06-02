@@ -63,7 +63,7 @@ export default function Register() {
       </div>
 
       <div>
-        <label htmlFor="fatherName" className="block mb-1 font-semibold text-gray-700">Father's Name (Block Letters)</label>
+        <label htmlFor="fatherName" className="block mb-1 font-semibold text-gray-700">Father Name (Block Letters)</label>
         <input
           type="text"
           id="fatherName"
