@@ -125,7 +125,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/photos-gallery"
+                  href="/gallery"
                   className="hover:underline font-open-sans"
                 >
                   Photos Gallery
@@ -133,7 +133,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/online-results"
+                  href="/results"
                   className="hover:underline font-open-sans"
                 >
                   Online Results
