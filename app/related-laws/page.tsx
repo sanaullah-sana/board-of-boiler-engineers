@@ -10,15 +10,17 @@ export default function RelatedLaw() {
         <Header />
 
         {/* Intro Banner Section */}
-        <section
-          style={{ backgroundImage: "url('/related-laws-intro-banner.png')" }}
-          className="relative bg-cover bg-center min-h-[12rem] sm:min-h-[16rem] md:min-h-[20rem] w-full flex items-center justify-center px-4"
-        >
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-lg h-[60%] bg-black/90 blur-[60px] z-0"></div>
-          <h2 className="relative z-10 text-white font-bold tracking-wider text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center font-raleway">
-            RELATED LAWS
-          </h2>
-        </section>
+<section
+  style={{ backgroundImage: "url('/related-laws-intro-banner.png')" }}
+  className="relative bg-cover bg-center min-h-[12rem] sm:min-h-[16rem] md:min-h-[20rem] w-full flex items-center justify-center px-4"
+>
+  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-lg h-[60%] bg-black bg-opacity-90 blur-3xl z-0"></div>
+  
+  <h2 className="relative z-10 text-white font-bold tracking-wider text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center font-raleway">
+    RELATED LAWS
+  </h2>
+</section>
+
         {/* /Intro Banner Section */}
 
         {/* Cards Section */}
