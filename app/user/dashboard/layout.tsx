@@ -54,28 +54,28 @@ export default function DashboardLayout() {
   <hr className="border-t border-white w-full" />
 
   {/* Profile */}
-  <Link href="/user/dashboard/profile" className="flex items-center space-x-3 hover:text-gray-300">
+  <Link href="/user/dashboard/" className="flex items-center space-x-3 hover:text-gray-300">
     <Image src="/profile-icon.png" alt="Profile Icon" width={20} height={20} />
     <span className="font-semibold tracking-wide">Profile</span>
   </Link>
   <hr className="border-t border-white w-full" />
 
   {/* Applications */}
-  <Link href="/user/dashboard/applications" className="flex items-center space-x-3 hover:text-gray-300">
+  <Link href="/user/dashboard/" className="flex items-center space-x-3 hover:text-gray-300">
     <Image src="/application-icon.png" alt="Applications Icon" width={20} height={20} />
     <span className="font-semibold tracking-wide">Applications</span>
   </Link>
   <hr className="border-t border-white w-full" />
 
   {/* Date Sheet */}
-  <Link href="/user/dashboard/date-sheet" className="flex items-center space-x-3 hover:text-gray-300">
+  <Link href="/user/dashboard/" className="flex items-center space-x-3 hover:text-gray-300">
     <Image src="/datesheet-icon.png" alt="Date Sheet Icon" width={20} height={20} />
     <span className="font-semibold tracking-wide">Date Sheet</span>
   </Link>
   <hr className="border-t border-white w-full" />
 
   {/* Result */}
-  <Link href="/user/dashboard/result" className="flex items-center space-x-3 hover:text-gray-300">
+  <Link href="/user/dashboard/" className="flex items-center space-x-3 hover:text-gray-300">
     <Image src="/result-icon.png" alt="Result Icon" width={20} height={20} />
     <span className="font-semibold tracking-wide">Result</span>
   </Link>
