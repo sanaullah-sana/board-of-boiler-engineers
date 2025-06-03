@@ -15,12 +15,22 @@ export default function Header() {
 
   return (
     <>
-      {/* Top banner with department name */}
-      <div className="bg-[#004432] md:py-4 py-3">
-        <p className="text-center text-white lg:text-xl md:text-base text-sm font-nato">
-          Industries, Commerce, Investment & Skills Development Department
-        </p>
-      </div>
+{/* Top banner with department name and dashboard link */}
+<div className="bg-[#004432] md:py-4 py-3 px-4">
+  <div className="flex flex-col md:flex-row items-center justify-between gap-2">
+    <p className="text-center text-white w-full lg:text-xl md:text-base text-sm font-nato">
+      Industries, Commerce, Investment & Skills Development Department
+    </p>
+    <Link href="/user/dashboard">
+      <button className="cursor-pointer bg-white text-[#004432] text-xs md:text-sm px-3 md:px-4 py-1 rounded hover:bg-gray-100 transition">
+       Dashboard
+      </button>
+    </Link>
+  </div>
+</div>
+
+
+
 
       {/* Main header section with background image */}
       <header>
