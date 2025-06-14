@@ -342,9 +342,6 @@ export default function Register() {
                 </button>
               </div>
             </div>
-                    <pre className="text-sm text-gray-800 overflow-auto max-h-64">
-          {JSON.stringify(submittedData, null, 2)}
-        </pre>
           </div>
         </section>
       )}
