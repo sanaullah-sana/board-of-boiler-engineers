@@ -6,8 +6,9 @@ import UserFooter from "@/app/components/UserFooter";
 
 export default function Register() {
   const [step, setStep] = useState(1);
-  const [submittedData, setSubmittedData] = useState<any>(null); // to store submitted data in state
-console.log(submittedData)
+const [submittedData, setSubmittedData] = useState<typeof formData | null>(null);
+
+
   const [formData, setFormData] = useState({
     certificate: "",
     fullName: "",
