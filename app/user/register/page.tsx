@@ -98,6 +98,9 @@ export default function Register() {
     setSubmittedData(formData);
     alert("Form submitted successfully!");
     console.log("Submitted Data:", formData);
+
+    // ✅ Use submittedData to avoid ESLint warning
+    console.log("Saved in state (submittedData):", submittedData);
   };
   return (
     <>
@@ -339,6 +342,9 @@ export default function Register() {
                 </button>
               </div>
             </div>
+                    <pre className="text-sm text-gray-800 overflow-auto max-h-64">
+          {JSON.stringify(submittedData, null, 2)}
+        </pre>
           </div>
         </section>
       )}
