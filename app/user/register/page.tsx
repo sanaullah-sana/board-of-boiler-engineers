@@ -4,44 +4,48 @@ import { useState } from "react";
 import UserHeader from "@/app/components/UserHeader";
 import UserFooter from "@/app/components/UserFooter";
 
+// ✅ Step 1: Move formData to a constant OUTSIDE the component
+const initialFormData = {
+  certificate: "",
+  fullName: "",
+  fatherName: "",
+  email: "",
+  mobile: "",
+  permanentAddress: "",
+  presentAddress: "",
+  day: "",
+  month: "",
+  year: "",
+  idCardNumber: "",
+  departmentName: "",
+  qualification: "",
+  degreeDay: "",
+  degreeMonth: "",
+  degreeYear: "",
+  frontIdCard: null,
+  backIdCard: null,
+  profilePhoto: null,
+  feeSlip: null,
+  certificateDiploma: "",
+  issueDay: "",
+  issueMonth: "",
+  issueYear: "",
+  biolerRegistryNo: "",
+  heatingSurface: "",
+  workingPressure: "",
+  factoryNameAddress: "",
+  candidateDesignation: "",
+  actualTime: "",
+  dateStartService: "",
+};
+
+// ✅ Step 2: Define type
+type FormDataType = typeof initialFormData;
+
 export default function Register() {
   const [step, setStep] = useState(1);
-const [submittedData, setSubmittedData] = useState<typeof formData | null>(null);
-
-
-  const [formData, setFormData] = useState({
-    certificate: "",
-    fullName: "",
-    fatherName: "",
-    email: "",
-    mobile: "",
-    permanentAddress: "",
-    presentAddress: "",
-    day: "",
-    month: "",
-    year: "",
-    idCardNumber: "",
-    departmentName: "",
-    qualification: "",
-    degreeDay: "",
-    degreeMonth: "",
-    degreeYear: "",
-    frontIdCard: null,
-    backIdCard: null,
-    profilePhoto: null,
-    feeSlip: null,
-    certificateDiploma: "",
-    issueDay: "",
-    issueMonth: "",
-    issueYear: "",
-    biolerRegistryNo: "",
-    heatingSurface: "",
-    workingPressure: "",
-    factoryNameAddress: "",
-    candidateDesignation: "",
-    actualTime: "",
-    dateStartService: "",
-  });
+  const [formData, setFormData] = useState<FormDataType>(initialFormData);
+  const [submittedData, setSubmittedData] = useState<FormDataType | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
@@ -74,22 +78,11 @@ const [submittedData, setSubmittedData] = useState<typeof formData | null>(null)
         profilePhoto,
         feeSlip,
       } = formData;
+
       if (
-        !certificate ||
-        !fullName ||
-        !fatherName ||
-        !email ||
-        !mobile ||
-        !permanentAddress ||
-        !presentAddress ||
-        !day ||
-        !month ||
-        !year ||
-        !idCardNumber ||
-        !frontIdCard ||
-        !backIdCard ||
-        !profilePhoto ||
-        !feeSlip
+        !certificate || !fullName || !fatherName || !email || !mobile ||
+        !permanentAddress || !presentAddress || !day || !month || !year ||
+        !idCardNumber || !frontIdCard || !backIdCard || !profilePhoto || !feeSlip
       ) {
         alert("Please fill out all required fields and upload files in Step 1.");
         return;
@@ -101,13 +94,11 @@ const [submittedData, setSubmittedData] = useState<typeof formData | null>(null)
 
   const prevStep = () => setStep((prev) => Math.max(prev - 1, 1));
 
-  // ✅ Submit function
   const handleSubmit = () => {
-    setSubmittedData(formData); // saving the full form data from step 1 to 3
+    setSubmittedData(formData);
     alert("Form submitted successfully!");
     console.log("Submitted Data:", formData);
   };
-
   return (
     <>
       <UserHeader />
